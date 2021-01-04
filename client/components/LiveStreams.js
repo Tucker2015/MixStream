@@ -3,7 +3,9 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import './LiveStreams.scss';
 import config from '../../server/config/default';
+import logo from './logo.png';
 
+console.log(logo);
 
 export default class Navbar extends React.Component {
 
@@ -19,7 +21,7 @@ export default class Navbar extends React.Component {
     }
 
     getLiveStreams() {
-        axios.get('http://127.0.0.1:' + config.rtmp_server.http.port + '/api/streams')
+        axios.get('http://176.9.31.102:' + config.rtmp_server.http.port + '/api/streams')
             .then(res => {
                 let streams = res.data;
                 if (typeof (streams['live'] !== 'undefined')) {
@@ -46,7 +48,9 @@ export default class Navbar extends React.Component {
         let streams = this.state.live_streams.map((stream, index) => {
             return (
                 <div className="stream col-xs-12 col-sm-12 col-md-3 col-lg-4" key={index}>
-                    <span className="live-label">LIVE</span>
+                    
+                    <span className="live-label">LIVE STREAM</span>
+                    
                     <Link to={'/stream/' + stream.username}>
                         <div className="stream-thumbnail">
                             <img src={'/thumbnails/' + stream.stream_key + '.png'}/>
@@ -64,6 +68,7 @@ export default class Navbar extends React.Component {
 
         return (
             <div className="container mt-5">
+                <img src={logo} alt="Logo" />
                 <h4>Live Streams</h4>
                 <hr className="my-4"/>
 

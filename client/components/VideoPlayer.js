@@ -2,7 +2,7 @@ import React from 'react';
 import videojs from 'video.js'
 import axios from 'axios';
 import config from '../../server/config/default';
-
+import './VideoPlayer.scss';
 
 export default class VideoPlayer extends React.Component {
 
@@ -25,10 +25,10 @@ export default class VideoPlayer extends React.Component {
             this.setState({
                 stream: true,
                 videoJsOptions: {
-                    autoplay: false,
+                    autoplay: true,
                     controls: true,
                     sources: [{
-                        src: 'http://127.0.0.1:' + config.rtmp_server.http.port + '/live/' + res.data.stream_key + '/index.m3u8',
+                        src: 'http://176.9.31.102:' + config.rtmp_server.http.port + '/live/' + res.data.stream_key + '/index.m3u8',
                         type: 'application/x-mpegURL'
                     }],
                     fluid: true,
@@ -49,15 +49,23 @@ export default class VideoPlayer extends React.Component {
 
     render() {
         return (
-            <div className="row">
+            
+            <div >
+                <div className="titleVid">
+                Test Stream
+                </div>
                 <div className="col-xs-12 col-sm-12 col-md-10 col-lg-8 mx-auto mt-5">
                     {this.state.stream ? (
                         <div data-vjs-player>
-                            <video ref={node => this.videoNode = node} className="video-js vjs-big-play-centered"/>
+                            <video ref={node => this.videoNode = node} className="video-js vjs-big-play-centered"/> 
                         </div>
+                        
                     ) : ' Loading ... '}
                 </div>
-            </div>
+                <div className="centerStyle">Beta Testing ....</div>
+                </div>
+            
+            
         )
     }
 }

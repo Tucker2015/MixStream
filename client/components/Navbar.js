@@ -7,7 +7,7 @@ export default class Navbar extends React.Component {
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <Link to={'/'} className={'navbar-brand'}>
-                        NodeStream
+                        MixStream Beta
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent"
@@ -22,9 +22,7 @@ export default class Navbar extends React.Component {
                                     Go Live
                                 </Link>
                             </li>
-                            <li className="nav-item float-right">
-                                <a className="nav-link" target="_blank" href="https://github.com/waleedahmad">Github</a>
-                            </li>
+                            
                             <li className="nav-item float-right">
                                 <a className="nav-link" href="/Logout">Logout</a>
                             </li>

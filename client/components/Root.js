@@ -17,6 +17,7 @@ export default class Root extends React.Component {
         return (
             <Router history={customHistory} >
                 <div>
+                    
                     <Navbar/>
                     <Route exact path="/" render={props => (
                         <LiveStreams  {...props} />
@@ -29,8 +30,10 @@ export default class Root extends React.Component {
                     <Route exact path="/settings" render={props => (
                         <Settings {...props} />
                     )}/>
+                    
                 </div>
             </Router>
+            
         )
     }
 }

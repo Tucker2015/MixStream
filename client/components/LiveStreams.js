@@ -3,9 +3,9 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import './LiveStreams.scss';
 import config from '../../server/config/default';
-import logo from './logo.png';
 
-console.log(logo);
+
+
 
 export default class Navbar extends React.Component {
 
@@ -68,8 +68,8 @@ export default class Navbar extends React.Component {
 
         return (
             <div className="container mt-5">
-                <img src={logo} alt="Logo" />
-                <h4>Live Streams</h4>
+                
+                <div className="headTitle">Live Streams</div>
                 <hr className="my-4"/>
 
                 <div className="streams row">

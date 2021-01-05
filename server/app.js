@@ -14,7 +14,7 @@ const express = require('express'),
     thumbnail_generator = require('./cron/thumbnails');
 
 mongoose.connect('mongodb://127.0.0.1/nodeStream' , { useNewUrlParser: true });
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 app.use(express.static('public'));

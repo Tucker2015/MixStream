@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "./node_modules/.bin/webpack --watch",
     "start": "./node_modules/.bin/supervisor -w server ./server/app.js",
-    "build": "webpack"
+    "build": "NODE_ENV=production webpack --config ./webpack.config.js --progress --profile --colors"
   },
   "author": "",
   "license": "ISC",

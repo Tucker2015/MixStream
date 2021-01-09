@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+require('./NavBar.scss');
 
 export default class Navbar extends React.Component {
     render() {
@@ -7,7 +8,7 @@ export default class Navbar extends React.Component {
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <Link to={'/'} className={'navbar-brand'}>
-                        MixStream Beta
+                        MixStream
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent"

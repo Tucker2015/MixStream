@@ -26,7 +26,7 @@ export default class VideoPlayer extends React.Component {
                 stream: true,
                 videoJsOptions: {
                     autoplay: true,
-                    controls: true,
+                    controls: false,
                     sources: [{
                         src: 'http://176.9.31.102:' + config.rtmp_server.http.port + '/live/' + res.data.stream_key + '/index.m3u8',
                         type: 'application/x-mpegURL'
@@ -51,16 +51,20 @@ export default class VideoPlayer extends React.Component {
         return (
             
             <div >
+                
                 <div className="titleVid">
                 Test Stream
                 </div>
+                
                 <div className="col-xs-12 col-sm-12 col-md-10 col-lg-8 mx-auto mt-5">
                     {this.state.stream ? (
-                        <div data-vjs-player>
+                        <div className="playerBorder">
+                        <div data-vjs-player >
                             <video ref={node => this.videoNode = node} className="video-js vjs-big-play-centered"/> 
                         </div>
-                        
+                        </div>
                     ) : ' Loading ... '}
+                
                 </div>
                 <div className="centerStyle">Beta Testing ....</div>
                 </div>

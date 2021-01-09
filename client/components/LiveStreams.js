@@ -49,7 +49,7 @@ export default class Navbar extends React.Component {
             return (
                 <div className="stream col-xs-12 col-sm-12 col-md-3 col-lg-4" key={index}>
                     
-                    <span className="live-label">LIVE STREAM</span>
+                    <span className="live-label">LIVE</span>
                     
                     <Link to={'/stream/' + stream.username}>
                         <div className="stream-thumbnail">

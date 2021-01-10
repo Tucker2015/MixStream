@@ -39,7 +39,7 @@ export default class Navbar extends React.Component {
         return (
             <React.Fragment>
                 <div className="container mt-5">
-                    <h4>Streaming Key</h4>
+                    <h4 style={{color:"white", backgroundColor:"red", width: "25%", padding: "10px",textAlign:"center"}}> Your Live Streaming Key</h4>
                     <hr className="my-4"/>
 
                     <div className="col-xs-12 col-sm-12 col-md-8 col-lg-6">
@@ -56,13 +56,13 @@ export default class Navbar extends React.Component {
                     </div>
                 </div>
 
-                <div className="container mt-5">
+                <div className="container mt-5 ">
                     <h4>How to Stream</h4>
-                    <hr className="my-4"/>
+                    <hr className="my-3"/>
 
                     <div className="col-12">
                         <div className="row">
-                            <p>
+                            <p style={{color:"#000", fontSize:"1.3rem"}}>
                                 You can use <a target="_blank" href="https://obsproject.com/">OBS</a> or
                                 <a target="_blank" href="https://www.xsplit.com/">XSplit</a> to Live stream. If you're
                                 using OBS, go to Settings > Stream and select Custom from service dropdown.

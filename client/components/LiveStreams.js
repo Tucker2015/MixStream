@@ -7,6 +7,7 @@ import config from '../../server/config/default';
 
 
 
+
 export default class Navbar extends React.Component {
 
     constructor(props) {
@@ -62,6 +63,7 @@ export default class Navbar extends React.Component {
                             {stream.username}
                         </Link>
                     </span>
+                    
                 </div>
             );
         });

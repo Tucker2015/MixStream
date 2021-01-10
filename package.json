@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@videojs/themes": "^1.0.1",
     "axios": "^0.18.1",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
@@ -26,6 +27,7 @@
     "express-session": "^1.15.6",
     "history": "^4.7.2",
     "jquery": "^3.4.1",
+    "mdbreact": "^5.0.1",
     "mongoose": "^5.4.18",
     "node-media-server": "^2.1.6",
     "passport": "^0.4.0",
@@ -37,7 +39,9 @@
     "request": "^2.88.0",
     "session-file-store": "^1.2.0",
     "shortid": "^2.2.14",
-    "video.js": "^7.4.1"
+    "video.js": "^7.10.2",
+    "videojs-errors": "^4.3.2",
+    "videojs-logo": "^2.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

@@ -3,7 +3,6 @@ import {Router, Route} from 'react-router-dom';
 import Navbar from './Navbar';
 import LiveStreams from './LiveStreams';
 import Settings from './Settings';
-
 import VideoPlayer from './VideoPlayer';
 const customHistory = require("history").createBrowserHistory();
 

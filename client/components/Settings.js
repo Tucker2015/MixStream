@@ -1,9 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+import { QRCode } from 'react-qrcode-logo';
+import { Button } from 'bootstrap';
+
 
 export default class Navbar extends React.Component {
 
     constructor(props) {
+
         super(props);
 
         this.state = {
@@ -18,6 +22,7 @@ export default class Navbar extends React.Component {
     }
 
     generateStreamKey(e) {
+
         axios.post('/settings/stream_key')
             .then(res => {
                 this.setState({
@@ -35,7 +40,14 @@ export default class Navbar extends React.Component {
             })
     }
 
+    onClickQR() {
+        window.location.href = qrCode;
+    }
+
     render() {
+        let qrCode = "larix://set/v1?conn[][url]=rtmp%3A%2F%2F176.9.31.102%3A1935%2Flive%2F" + this.state.stream_key + "&conn[][name]=MixStream%20Live";
+        let url = "https://live.kevtucker.com:8443/live/" + this.state.stream_key + "/index.m3u8";
+
         return (
             <React.Fragment>
                 <div className="container mt-5">
@@ -52,6 +64,7 @@ export default class Navbar extends React.Component {
                                 onClick={this.generateStreamKey}>
                                 Generate a new key
                             </button>
+
                         </div>
                     </div>
                 </div>
@@ -89,11 +102,20 @@ export default class Navbar extends React.Component {
 
                         </div>
                     </div>
+
                     <p style={{ color: "#000", fontSize: "1.3rem" }}> <a target="_blank" href="https://play.google.com/store/apps/details?id=com.wmspanel.larix_broadcaster">Larix for Android</a></p>
                     <p style={{ color: "#000", fontSize: "1.3rem" }}> <a target="_blank" href="https://apps.apple.com/us/app/larix-broadcaster/id1042474385">Larix for iOS</a></p>
+
+                    <h4>Scan the below code using phone Camera to install profile for Larix</h4>
+                    <br></br>
+                    <p style={{ color: "#000", fontSize: "1.8rem" }}><a target="_blank" href={qrCode}>Press to open in Larix</a></p>
+                    <QRCode value={qrCode} />
+
+
+
                 </div>
 
-            </React.Fragment>
+            </React.Fragment >
         )
     }
 }

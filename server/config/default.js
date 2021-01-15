@@ -1,7 +1,7 @@
 const config = {
     server: {
         secret: 'kjVkuti2xAyF3JGCzSZTk0YWM5JhI9mgQW4ryEEE',
-        port : 3333
+        port: 3333
     },
     rtmp_server: {
         rtmp: {
@@ -15,6 +15,11 @@ const config = {
             port: 8888,
             mediaroot: './server/media',
             allow_origin: '*'
+        },
+        https: {
+            port: 8443,
+            key: './server/media/privkey.pem',
+            cert: './server/media/fullchain.pem'
         },
         trans: {
             ffmpeg: '/usr/bin/ffmpeg',

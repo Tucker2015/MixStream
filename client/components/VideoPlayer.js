@@ -1,12 +1,15 @@
 import React from 'react';
-import videojs from 'video.js'
+import videojs, { VideoJsLogo } from 'video.js'
 import axios from 'axios';
 import config from '../../server/config/default';
 import './VideoPlayer.scss';
 import '@videojs/themes/dist/forest/index.css';
 import 'videojs-logo';
+import { data } from 'jquery';
+
 
 export default class VideoPlayer extends React.Component {
+
 
     constructor(props) {
         super(props);
@@ -36,6 +39,7 @@ export default class VideoPlayer extends React.Component {
                     }],
                     fluid: true,
                 }
+                
             }, () => {
                 this.player = videojs(this.videoNode, this.state.videoJsOptions, function onPlayerReady() {
                     console.log('onPlayerReady', this)
@@ -50,31 +54,36 @@ export default class VideoPlayer extends React.Component {
         }
     }
 
+
     render() {
+        
+        let url = "https://live.kevtucker.com:8443/live/" + data.stream_key + "/index.m3u8";
+        
         return (
-            
+
             <div >
-                
+
                 <div className="titleVid">
-                Test Stream
+                    Test Stream
+                    
                 </div>
-                
+
                 <div className="col-xs-12 col-sm-12 col-md-10 col-lg-8 mx-auto mt-5">
                     {this.state.stream ? (
                         <div className="playerBorder">
-                        <div data-vjs-player >
-                            
-                            <video ref={node => this.videoNode = node} className="video-js vjs-theme-forest vjs-big-play-centered"/> 
-                        </div>
+                            <div data-vjs-player >
+
+                                <video ref={node => this.videoNode = node} className="video-js vjs-theme-forest vjs-big-play-centered" />
+                            </div>
                         </div>
                     ) : ' Loading ... '}
-                
+
                 </div>
-                <div className="centerStyle">Beta Testing ....</div>
-                
-                </div>
-            
-            
+                <div className="centerStyle">Beta Testing ..</div>
+                {/* <h5 style={{ color: "#000", fontSize: "1.8rem", textAlign: 'center' }}><a style={{color: "#000"}} target="_blank" href={url}>Link for your Live Stream</a></h5> */}
+            </div>
+
+
         )
     }
 }

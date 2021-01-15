@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { QRCode } from 'react-qrcode-logo';
 import { Button } from 'bootstrap';
-
+import obsconfig from './obsconfig.png';
 
 export default class Navbar extends React.Component {
 
@@ -82,6 +82,7 @@ export default class Navbar extends React.Component {
                                 Enter <b>rtmp://176.9.31.102:1935/live</b> in server input field. Also, add your stream key.
                                 Click apply to save.
                             </p>
+                            <img src={obsconfig} class="w-100 h-100 " alt="..."></img>
                         </div>
 
 
@@ -91,26 +92,30 @@ export default class Navbar extends React.Component {
                     <h4>Using Larix with Mobile</h4>
                     <hr className="my-3" />
 
-                    <div className="col-12">
-                        <div className="row">
-                            <p style={{ color: "#000", fontSize: "1.3rem" }}>
-                                To use Larix add a new connection with the + icon and enter the following for the url
-                        <b> rtmp://176.9.31.102:1935/live/</b>{this.state.stream_key}
-                            </p>
-                            <p style={{ color: "#000", fontSize: "1.3rem" }}>Leave Login and Password blank.</p>
-                            <br></br>
+                    <div className="container">
 
-                        </div>
+                        <p style={{ color: "#000", fontSize: "1.3rem" }}>
+                            To use Larix add a new connection with the + icon and enter the following for the url
+                        <b> rtmp://176.9.31.102:1935/live/</b>{this.state.stream_key}
+                        </p>
+                        <p style={{ color: "#000", fontSize: "1.3rem" }}>Leave Login and Password blank.</p>
+
                     </div>
 
-                    <p style={{ color: "#000", fontSize: "1.3rem" }}> <a target="_blank" href="https://play.google.com/store/apps/details?id=com.wmspanel.larix_broadcaster">Larix for Android</a></p>
-                    <p style={{ color: "#000", fontSize: "1.3rem" }}> <a target="_blank" href="https://apps.apple.com/us/app/larix-broadcaster/id1042474385">Larix for iOS</a></p>
+                    <div className="container">
+                        <a href="https://play.google.com/store/apps/details?id=com.wmspanel.larix_broadcaster" class="btn btn-secondary btn-lg " tabindex="-1" role="button" aria-disabled="true">Download Larix for Android</a>
+                        <a href="https://apps.apple.com/us/app/larix-broadcaster/id1042474385" class="btn btn-secondary btn-lg ml-1" tabindex="-1" role="button" aria-disabled="true">Download Larix for iOS</a>
+                        <p style={{ color: "#000", fontSize: "1.3rem" }}> Then click the button below to Add Profile</p>
 
-                    <h4>Scan the below code using phone Camera to install profile for Larix</h4>
+                        <a href={qrCode} class="btn btn-secondary btn-lg ml-1" tabindex="-1" role="button" aria-disabled="true">Open Profile in Larix</a>
+                    </div>
                     <br></br>
-                    <p style={{ color: "#000", fontSize: "1.8rem" }}><a target="_blank" href={qrCode}>Press to open in Larix</a></p>
-                    <QRCode value={qrCode} />
 
+
+                    <div class="container">
+                        <p style={{ color: "#000", fontSize: "1.3rem" }}>Or scan the QR code to Add Profile</p>
+                        <QRCode value={qrCode} />
+                    </div>
 
 
                 </div>

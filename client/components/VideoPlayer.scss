@@ -5,10 +5,13 @@
     color: #fff;
     padding: 5px;
   background-color:rgb(187, 46, 46);
-  
+  text-transform: uppercase;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  width: 150px;
+  width: 300px;
+  -webkit-animation: flash linear 3s infinite;
+	animation: flash linear 3s infinite;
   
   }
   .centerStyle {

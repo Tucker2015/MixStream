@@ -55,7 +55,7 @@ export default class VideoPlayer extends React.Component {
 
             <div >
                 <div className="titleVid">
-                    Test Stream
+                    {this.props.match.params.username} Live
                 </div>
 
                 <div className="col-xs-12 col-sm-12 col-md-10 col-lg-8 mx-auto mt-5">

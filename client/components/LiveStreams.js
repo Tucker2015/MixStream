@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 import './LiveStreams.scss';
 import config from '../../server/config/default';
 
-
-
-
-
 export default class Navbar extends React.Component {
 
     constructor(props) {

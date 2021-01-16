@@ -18,12 +18,12 @@
                 <% if (errors.username.length) { %>
                     <small class="form-text text-danger"><%= errors.username %></small>
                 <% } %>
-                <label for="inputEmail" class="visually-hidden">Email address</label>
+                <label for="inputEmail" class="visually-hidden mt-1">Email address</label>
                 <input type="email" name="email" class="form-signin" placeholder="Enter email" required>
                 <% if (errors.email.length) { %>
                     <small class="form-text text-danger"><%= errors.email %></small>
                 <% } %>
-                <label>Password</label>
+                <label class="visually-hidden mt-1">Password</label>
                 <input type="password" name="password" class="form-signin" placeholder="Password" required>
            
             <div class="form-signin">

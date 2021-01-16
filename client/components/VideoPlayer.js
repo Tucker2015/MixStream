@@ -5,6 +5,7 @@ import config from '../../server/config/default';
 import './VideoPlayer.scss';
 import '@videojs/themes/dist/forest/index.css';
 import 'videojs-logo';
+import AdsenseWidget from './AdSense';
 export default class VideoPlayer extends React.Component {
 
     constructor(props) {
@@ -66,7 +67,7 @@ export default class VideoPlayer extends React.Component {
                             </div>
                         </div>
                     ) : ' Loading ... '}
-
+                    <AdsenseWidget />
                 </div>
             </div>
 

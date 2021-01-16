@@ -72,7 +72,7 @@ export default class Navbar extends React.Component {
         return (
             <div className="container mt-5">
 
-                <div className="headTitle">Live Streams</div>
+                <h4 className="w-50 p-3 mb-2 bg-success text-white rounded">Live Streams</h4>
                 <hr className="my-4" />
 
                 <div className="streams row">

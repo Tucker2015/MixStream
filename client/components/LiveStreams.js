@@ -42,6 +42,7 @@ export default class Navbar extends React.Component {
                 live_streams: res.data
             }, () => {
                 console.log(this.state);
+
             });
         });
     }
@@ -63,6 +64,7 @@ export default class Navbar extends React.Component {
                         <Link to={'/stream/' + stream.username}>
                             {stream.username}
                         </Link>
+
                     </span>
 
                 </div>

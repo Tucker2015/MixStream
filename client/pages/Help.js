@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-export default class Footer extends Component {
 
-
+export default class Help extends Component {
 
     render() {
         const axios = require('axios');
@@ -36,7 +35,6 @@ export default class Footer extends Component {
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-                <div className="text-center text-red bg-light mt-2">MixStream</div>
             </div>
 
         )

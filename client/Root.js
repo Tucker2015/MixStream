@@ -1,11 +1,11 @@
 import React from "react";
 import { Router, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import LiveStreams from './LiveStreams';
-import Settings from './Settings';
-import VideoPlayer from './VideoPlayer';
-import Help from '../pages/Help';
-import Profile from '../pages/Profile';
+import Navbar from './components/Navbar';
+import LiveStreams from './components/LiveStreams';
+import Settings from './pages/Settings';
+import VideoPlayer from './components/VideoPlayer';
+import Help from './pages/Help';
+import Profile from './pages/Profile';
 
 const customHistory = require("history").createBrowserHistory();
 
@@ -29,7 +29,7 @@ export default class Root extends React.Component {
                         <VideoPlayer {...props} />
                     )} />
 
-                    <Route exact path="/settings" render={props => (
+                    <Route exact path="/pages/settings" render={props => (
                         <Settings {...props} />
                     )} />
                     <Route exact path="/pages/help" render={props => (

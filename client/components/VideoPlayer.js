@@ -3,7 +3,7 @@ import videojs, { VideoJsLogo } from 'video.js'
 import axios from 'axios';
 import config from '../../server/config/default';
 import './VideoPlayer.scss';
-import '@videojs/themes/dist/forest/index.css';
+import '@videojs/themes/dist/city/index.css';
 import 'videojs-logo';
 import AdsenseWidget from './AdSense';
 export default class VideoPlayer extends React.Component {
@@ -63,7 +63,7 @@ export default class VideoPlayer extends React.Component {
                     {this.state.stream ? (
                         <div className="playerBorder">
                             <div data-vjs-player >
-                                <video ref={node => this.videoNode = node} className="video-js vjs-theme-forest vjs-big-play-centered" />
+                                <video ref={node => this.videoNode = node} className="video-js vjs-big-play-centered" />
                             </div>
                         </div>
                     ) : ' Loading ... '}

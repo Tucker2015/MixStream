@@ -43,8 +43,9 @@ export default class Navbar extends React.Component {
         window.location.href = qrCode;
     }
 
+    // larix://set/v1?conn[][url]=rtmp%3A%2F%2F176.9.31.102%3A1935%2Flive%2F&conn[][name]=MixStream%20Live&conn[][overwrite]=on&enc[vid][res]=1280%20x%20720&enc[vid][bitrate]=1000&deleteConn=1
     render() {
-        let qrCode = "larix://set/v1?conn[][url]=rtmp%3A%2F%2F176.9.31.102%3A1935%2Flive%2F" + this.state.stream_key + "&conn[][name]=MixStream%20Live";
+        let qrCode = "larix://set/v1?conn[][url]=rtmp%3A%2F%2F176.9.31.102%3A1935%2Flive%2F" + this.state.stream_key + "&conn[][name]=MixStream%20Live&conn[][overwrite]=on&enc[vid][res]=1280x720&enc[vid][bitrate]=1000&deleteConn=1";
         let url = "https://live.kevtucker.com:8443/live/" + this.state.stream_key + "/index.m3u8";
 
         return (

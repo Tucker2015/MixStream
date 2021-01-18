@@ -29,7 +29,7 @@ export default class Root extends React.Component {
                         <VideoPlayer {...props} />
                     )} />
 
-                    <Route exact path="/pages/settings" render={props => (
+                    <Route exact path="/settings" render={props => (
                         <Settings {...props} />
                     )} />
                     <Route exact path="/pages/help" render={props => (

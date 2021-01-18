@@ -2,10 +2,9 @@ import React from 'react';
 import videojs, { VideoJsLogo } from 'video.js'
 import axios from 'axios';
 import config from '../../server/config/default';
-import './VideoPlayer.scss';
+import '../styles/VideoPlayer.scss';
 import '@videojs/themes/dist/city/index.css';
 import 'videojs-logo';
-import AdsenseWidget from './AdSense';
 export default class VideoPlayer extends React.Component {
 
     constructor(props) {
@@ -67,7 +66,7 @@ export default class VideoPlayer extends React.Component {
                             </div>
                         </div>
                     ) : ' Loading ... '}
-                    <AdsenseWidget />
+
                 </div>
             </div>
 

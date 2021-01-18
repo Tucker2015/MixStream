@@ -13,21 +13,21 @@
         <form action="/register" method="post">
             
             <h1 class="h3 mb-3 fw-normal text-center">Register</h1>
-                <label>Username</label>
+                <label class="h5">Username</label>
                 <input type="text" name="username" class="form-signin" placeholder="Enter username" required>
                 <% if (errors.username.length) { %>
                     <small class="form-text text-danger"><%= errors.username %></small>
                 <% } %>
-                <label for="inputEmail" class="visually-hidden mt-1">Email address</label>
+                <label for="inputEmail" class="visually-hidden h5 mt-1">Email address</label>
                 <input type="email" name="email" class="form-signin" placeholder="Enter email" required>
                 <% if (errors.email.length) { %>
                     <small class="form-text text-danger"><%= errors.email %></small>
                 <% } %>
-                <label class="visually-hidden mt-1">Password</label>
+                <label class="visually-hidden h5 mt-1">Password</label>
                 <input type="password" name="password" class="form-signin" placeholder="Password" required>
            
             <div class="form-signin">
-                <div class="leader">
+                <div class="leader h5">
                     Have an account? Login <a href="/login">here</a>.
                 </div>
             </div>

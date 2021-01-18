@@ -6,25 +6,25 @@
 
 <div class="container app mt-5">
     <h1 class="shadow rounded-pill text-center p-2  mb-2 bg-success text-white">MixStream</h1>
-
+</div>
     <hr class="my-4">
     <div class="containerCenter rounded shadow">
         
         <form action="/login" method="post">
             <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
-                <label for="inputEmail" class="visually-hidden">Email address</label>
+                <label for="inputEmail" class="visually-hidden h5">Email address</label>
                 <input type="email" name="email" class="form-signin" placeholder="Enter email" required >
                 <% if (errors.email.length) { %>
                     <small class="form-text text-danger"><%= errors.email %></small>
                 <% } %>
-                <label for="inputPassword" class="visually-hidden mt-1">Password</label>
+                <label for="inputPassword" class="visually-hidden h5 mt-1">Password</label>
                 <input type="password" name="password" class="form-signin" placeholder="Password" required>
                 <% if (errors.password.length) { %>
                     <small class="form-text text-danger"><%= errors.password %></small>
                 <% } %>
            
             <div class="form-signin">
-                <div class="leader">
+                <div class="leader h5">
                     Don't have an account? Register <a href="/register">here</a>.
                 </div>
             </div>

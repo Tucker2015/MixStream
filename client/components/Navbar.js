@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import logo from './logo.png';
 require('./NavBar.scss');
 
 export default class Navbar extends React.Component {
@@ -10,7 +10,8 @@ export default class Navbar extends React.Component {
                 <div className="container">
 
                     <Link to={'/'} className={'navbar-brand'} >
-                        MixStream
+                        <img src={logo} alt="" width="40" height="40" class="d-inline-block align-center rounded mr-2" />
+                           MixStream
                     </Link>
                     <span class="navbar-text">
                         Beta Testing

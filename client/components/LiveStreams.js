@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './LiveStreams.scss';
 import config from '../../server/config/default';
-import AdsenseWidget from './AdSense';
+
 export default class Navbar extends React.Component {
 
     constructor(props) {
@@ -78,7 +78,7 @@ export default class Navbar extends React.Component {
                 <div className="streams row">
                     {streams}
                 </div>
-                <AdsenseWidget />
+
             </div>
         )
     }

@@ -1,7 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { QRCode } from 'react-qrcode-logo';
-import obsconfig from '../assets/obsconfig.png';
 
 export default class Navbar extends React.Component {
 
@@ -10,7 +8,8 @@ export default class Navbar extends React.Component {
         super(props);
 
         this.state = {
-            stream_key: ''
+            stream_key: '',
+            username: 'dd'
         };
     }
 
@@ -21,8 +20,10 @@ export default class Navbar extends React.Component {
     getStreamKey() {
         axios.get('/settings/stream_key')
             .then(res => {
+                console.log(res.data);
                 this.setState({
-                    stream_key: res.data.stream_key
+                    stream_key: res.data.stream_key,
+                    username: res.data.username
                 });
             })
     }
@@ -37,7 +38,7 @@ export default class Navbar extends React.Component {
                         <div class="card-header h3">Profile
                     </div>
                         <div class="card-body">
-                            <h5 class="card-title">Username :</h5>
+                            <h5 class="card-title">Username : {this.state.username}</h5>
                             <h5 class="card-title">Email :</h5>
                             <h5 class="card-title">Stream Key : {this.state.stream_key}</h5>
                             <a href="#" class="btn btn-primary">Go somewhere</a>

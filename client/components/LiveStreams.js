@@ -22,6 +22,7 @@ export default class Navbar extends React.Component {
     componentWillUnmount() {
         clearInterval(this.interval);
     }
+
     getLiveStreams() {
         axios.get('http://176.9.31.102:' + config.rtmp_server.http.port + '/api/streams')
             .then(res => {
@@ -38,6 +39,7 @@ export default class Navbar extends React.Component {
                 streams: live_streams
             }
         }).then(res => {
+            console.log(res.data);
             this.setState({
                 live_streams: res.data
             }, () => {

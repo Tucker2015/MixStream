@@ -1,8 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import axios from 'axios';
 require('../styles/NavBar.scss');
 export default class Navbar extends React.Component {
+
+
+    constructor(props) {
+
+        super(props);
+
+        this.state = {
+            stream_key: '',
+            username: ''
+        };
+    }
+
+    componentDidMount() {
+        this.getStreamKey();
+    }
+
+    getStreamKey() {
+        axios.get('/settings/stream_key')
+            .then(res => {
+                console.log(res.data);
+                this.setState({
+                    stream_key: res.data.stream_key,
+                    username: res.data.username,
+                    email: res.data.email
+                });
+            })
+    }
+
     render() {
         return (
 
@@ -14,8 +43,8 @@ export default class Navbar extends React.Component {
                            MixStream
                     </Link>
                     <span class="navbar-text">
-                        Beta Testing
-    </span>
+                        {this.state.username}
+                    </span>
                     <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

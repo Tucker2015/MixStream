@@ -9,7 +9,9 @@ router.get('/stream_key',
         User.findOne({ email: req.user.email }, (err, user) => {
             if (!err) {
                 res.json({
-                    stream_key: user.stream_key
+                    stream_key: user.stream_key,
+                    username: user.username,
+                    email: user.email
                 })
             }
         });

@@ -23,7 +23,8 @@ export default class Navbar extends React.Component {
                 console.log(res.data);
                 this.setState({
                     stream_key: res.data.stream_key,
-                    username: res.data.username
+                    username: res.data.username,
+                    email: res.data.email
                 });
             })
     }
@@ -37,7 +38,7 @@ export default class Navbar extends React.Component {
                     </div>
                         <div class="card-body">
                             <h5 class="card-title">Username : {this.state.username}</h5>
-                            <h5 class="card-title">Email :</h5>
+                            <h5 class="card-title">Email : {this.state.email}</h5>
                             <h5 class="card-title">Stream Key : {this.state.stream_key}</h5>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>

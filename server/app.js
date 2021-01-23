@@ -13,7 +13,7 @@ const express = require('express'),
     node_media_server = require('./media_server'),
     thumbnail_generator = require('./cron/thumbnails');
 
-mongoose.connect('mongodb+srv://kevtucker:Baggersb20@mernauth.6wgpp.mongodb.net/nodeStream?retryWrites=true&w=majority', { useNewUrlParser: true }).then(() => console.log("MongoDB successfully connected"))
+mongoose.connect('mongodb+srv://kevtucker:Baggersb20@mernauth.6wgpp.mongodb.net/nodeStream?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => console.log("MongoDB successfully connected"))
     .then(() => console.log("MongoDB successfully connected"))
     .catch(err => console.log(err));
 

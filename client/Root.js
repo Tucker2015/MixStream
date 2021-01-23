@@ -26,7 +26,7 @@ export default class Root extends React.Component {
 
                     <Navbar />
                     <Footer />
-                    <Route exact path="/pages/profile" render={props => (
+                    <Route exact path="/profile" render={props => (
                         <Profile {...props} />
                     )} />
                     <Route exact path="/" render={props => (
@@ -40,7 +40,7 @@ export default class Root extends React.Component {
                     <Route exact path="/settings" render={props => (
                         <Settings {...props} />
                     )} />
-                    <Route exact path="/pages/help" render={props => (
+                    <Route exact path="/help" render={props => (
                         <Help {...props} />
                     )} />
 

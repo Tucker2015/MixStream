@@ -3,13 +3,14 @@ import axios from 'axios';
 
 export default class Navbar extends React.Component {
 
-    constructor(props) {
 
+    constructor(props) {
         super(props);
 
         this.state = {
             stream_key: '',
-            username: ''
+            username: '',
+            date: new Date().toLocaleString()
         };
     }
 
@@ -32,15 +33,18 @@ export default class Navbar extends React.Component {
 
         return (
             <React.Fragment>
+
                 <div className="container mt-5 " style={{ maxWidth: "100%", width: "400px" }}>
-                    <div class="card">
-                        <div class="card-header h3">Profile
+                    <div className="card">
+                        <div className="card-header h3">Your Profile
                     </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Username : {this.state.username}</h5>
-                            <h5 class="card-title">Email : {this.state.email}</h5>
-                            <h5 class="card-title">Stream Key : {this.state.stream_key}</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div className="card-body">
+                            <h5 className="card-title">Username : {this.state.username}</h5>
+                            <h5 className="card-title">Email : {this.state.email}</h5>
+
+                            <h5 className="card-title">Stream Key : {this.state.stream_key}</h5>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+
                         </div>
 
                     </div>

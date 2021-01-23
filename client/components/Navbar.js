@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import axios from 'axios';
+import { faHome, faVideo, faTv, faUserAlt, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 require('../styles/NavBar.scss');
 export default class Navbar extends React.Component {
 
@@ -42,7 +44,7 @@ export default class Navbar extends React.Component {
                         <img src={logo} alt="" width="40" height="40" class="d-inline-block align-center rounded mr-2" />
                            MixStream
                     </Link>
-                    <span class="navbar-text">
+                    <span className="navbar-text">
                         {this.state.username}
                     </span>
                     <button className="navbar-toggler" type="button" data-toggle="collapse"
@@ -55,21 +57,19 @@ export default class Navbar extends React.Component {
                         <ul className="navbar-nav ml-auto">
 
                             <li className="nav-item float-right">
-                                <a className="nav-link" href="/">Home</a>
+
+                                <a className="nav-link" href="/"><FontAwesomeIcon icon={faTv} /> Live Streams</a>
                             </li>
                             <li className="nav-item float-right">
-                                <Link className={'nav-link'} to={'/settings'} >
-                                    Go Live
-                                </Link>
+                                <a className="nav-link" href="/settings" ><FontAwesomeIcon icon={faVideo} /> Go Live
+                                </a>
+                            </li>
+
+                            <li className="nav-item float-right">
+                                <a className="nav-link" href="/profile"><FontAwesomeIcon icon={faUserAlt} /> Profile</a>
                             </li>
                             <li className="nav-item float-right">
-                                <a className="nav-link" href="/pages/help">Help</a>
-                            </li>
-                            <li className="nav-item float-right">
-                                <a className="nav-link" href="/pages/profile">Profile</a>
-                            </li>
-                            <li className="nav-item float-right">
-                                <a className="nav-link" href="/Logout">Logout</a>
+                                <a className="nav-link" href="/Logout"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</a>
                             </li>
                         </ul>
                     </div>

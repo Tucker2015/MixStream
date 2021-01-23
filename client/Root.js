@@ -6,6 +6,8 @@ import Settings from './pages/Settings';
 import VideoPlayer from './components/VideoPlayer';
 import Help from './pages/Help';
 import Profile from './pages/Profile';
+import Footer from './components/Footer';
+import SideBar from "./components/SideBar";
 
 const customHistory = require("history").createBrowserHistory();
 
@@ -17,10 +19,14 @@ export default class Root extends React.Component {
 
     render() {
         return (
+
             <Router history={customHistory} >
+
                 <div>
 
                     <Navbar />
+                    {/* <SideBar /> */}
+                    <Footer />
                     <Route exact path="/" render={props => (
                         <LiveStreams  {...props} />
                     )} />
@@ -38,7 +44,9 @@ export default class Root extends React.Component {
                     <Route exact path="/pages/profile" render={props => (
                         <Profile {...props} />
                     )} />
+
                 </div>
+
             </Router>
 
         )

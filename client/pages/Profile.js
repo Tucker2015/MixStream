@@ -9,7 +9,7 @@ export default class Navbar extends React.Component {
 
         this.state = {
             stream_key: '',
-            username: 'dd'
+            username: ''
         };
     }
 
@@ -27,8 +27,6 @@ export default class Navbar extends React.Component {
                 });
             })
     }
-
-
     render() {
 
         return (

@@ -13,7 +13,10 @@ const express = require('express'),
     node_media_server = require('./media_server'),
     thumbnail_generator = require('./cron/thumbnails');
 
-mongoose.connect('mongodb://127.0.0.1/nodeStream' , { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://kevtucker:Baggersb20@mernauth.6wgpp.mongodb.net/nodeStream?retryWrites=true&w=majority', { useNewUrlParser: true }).then(() => console.log("MongoDB successfully connected"))
+    .then(() => console.log("MongoDB successfully connected"))
+    .catch(err => console.log(err));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
@@ -22,17 +25,17 @@ app.use('/thumbnails', express.static('server/thumbnails'));
 app.use(flash());
 
 app.use(require('cookie-parser')());
-app.use(bodyParse.urlencoded({extended: true}));
-app.use(bodyParse.json({extended: true}));
+app.use(bodyParse.urlencoded({ extended: true }));
+app.use(bodyParse.json({ extended: true }));
 
 app.use(Session({
     store: new FileStore({
-        path : 'server/sessions'
+        path: 'server/sessions'
     }),
     secret: config.server.secret,
-    maxAge : Date().now + (60 * 1000 * 30),
-    resave : true,
-    saveUninitialized : false,
+    maxAge: Date().now + (60 * 1000 * 30),
+    resave: true,
+    saveUninitialized: false,
 }));
 
 app.use(passport.initialize());
@@ -49,6 +52,8 @@ app.get('/logout', (req, res) => {
     req.logout();
     return res.redirect('/login');
 });
+
+
 
 app.get('*', middleware.ensureLoggedIn(), (req, res) => {
     res.render('index');

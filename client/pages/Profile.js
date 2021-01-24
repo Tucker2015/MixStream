@@ -3,10 +3,8 @@ import axios from 'axios';
 import logo from '../assets/profile.png'
 export default class Navbar extends React.Component {
 
-
     constructor(props) {
         super(props);
-
         this.state = {
             stream_key: '',
             username: '',
@@ -15,10 +13,10 @@ export default class Navbar extends React.Component {
     }
 
     componentDidMount() {
-        this.getStreamKey();
+        this.getProfileInfo();
     }
 
-    getStreamKey() {
+    getProfileInfo() {
         axios.get('/settings/stream_key')
             .then(res => {
                 console.log(res.data);
@@ -33,11 +31,7 @@ export default class Navbar extends React.Component {
 
         return (
 
-
-
-
-            <div className="container mt-5 " style={{ maxWidth: "100%", width: "400px" }}>
-
+            <div className="slide container mt-5 " style={{ maxWidth: "100%", width: "400px" }}>
                 <div className="card">
                     <img src={logo} alt="" height="200" />
                     <div className="card-header h3">Your Profile
@@ -50,15 +44,13 @@ export default class Navbar extends React.Component {
                         <form>
                             <div className="form-group">
                                 <h5 className="card-title" for="fileUpload">Upload Profile Image</h5>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1"></input>
-                                <button className="btn btn-primary mt-2">Upload</button>
+                                <input type="file" className="form-control-file" id="exampleFormControlFile1"></input>
+                                <button className="btn btn-primary mt-2 ">Upload</button>
                             </div>
                         </form>
-
                     </div>
                 </div >
             </div >
-
         )
     }
 }

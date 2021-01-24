@@ -52,12 +52,12 @@ export default class Navbar extends React.Component {
             <React.Fragment>
                 <div className="container mt-5">
                     <div className="card" style={{ maxWidth: "100%", width: "400px" }}>
-                        <div className="card-header h3">Your Live Streaming Key
+                        <div className="card-header h3">Your Live Streaming Key :
                     </div>
                         <div className="card-body">
                             <h3 className="card-title">{this.state.stream_key}</h3>
                             <button
-                                className="btn btn-success mt-3"
+                                className="btn btn-danger mt-3"
                                 onClick={this.generateStreamKey}>
                                 Generate a new key
                             </button>
@@ -67,7 +67,7 @@ export default class Navbar extends React.Component {
                     </div>
                 </div>
 
-                <div className="container mt-5 ">
+                <div className="container mt-5 bg-dark p-3 w-100">
                     <h4 className="textHeader">How to Stream</h4>
                     <hr className="my-3" />
                     <div className="col-12">
@@ -75,15 +75,15 @@ export default class Navbar extends React.Component {
                             <p className="textBody">
                                 You can use <a target="_blank" href="https://obsproject.com/">OBS</a> or
                                 <a target="_blank" href="https://www.xsplit.com/">XSplit</a> to Live stream. If you're
-                                using OBS, go to Settings > Stream and select Custom from service dropdown.
+                                using OBS, go to Settings - Stream and select Custom from service dropdown.
                                 Enter <b>rtmp://176.9.31.102:1935/live</b> in server input field. Also, add your stream key.
                                 Click apply to save.
                             </p>
-                            <img src={obsconfig} class="w-100 h-100 " alt="..."></img>
+                            <img src={obsconfig} class="w-75 h-75 " alt="..."></img>
                         </div>
                     </div>
                 </div>
-                <div className="container mt-5 ">
+                <div className="container mt-5 bg-dark p-3 w-100">
                     <h4 className="textHeader">Using Larix with Mobile</h4>
                     <hr className="my-3" />
                     <p className="textBody">
@@ -91,13 +91,18 @@ export default class Navbar extends React.Component {
                         <b> rtmp://176.9.31.102:1935/live/</b>{this.state.stream_key}
                     </p>
                     <p className="textBody">Leave Login and Password blank.</p>
-
-                    <a href="https://play.google.com/store/apps/details?id=com.wmspanel.larix_broadcaster" class="btn btn-secondary btn-lg mb-1" role="button" aria-disabled="true">Download Larix for Android</a>
+                    <p className="textBody">Or click the button below to add profile automatically.</p>
+                    <a href={qrCode} class="btn btn-secondary btn-lg mb-2" role="button" aria-disabled="true">Open Profile in Larix</a>
                     <br></br>
-                    <a href="https://apps.apple.com/us/app/larix-broadcaster/id1042474385" class="btn btn-secondary btn-lg mb-1" role="button" aria-disabled="true">Download Larix for iOS</a>
-                    <p className="textBody"> Then click the button below to Add Profile</p>
 
-                    <a href={qrCode} class="btn btn-secondary btn-lg" role="button" aria-disabled="true">Open Profile in Larix</a>
+                    <div className="">
+                        <p className="textBody" >Download Larix for Mobile</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.wmspanel.larix_broadcaster" class="btn btn-secondary btn-m mr-2" role="button" aria-disabled="true">Download Larix for Android</a>
+
+                        <a href="https://apps.apple.com/us/app/larix-broadcaster/id1042474385" class="btn btn-secondary btn-m" role="button" aria-disabled="true">Download Larix for iOS</a>
+                    </div>
+
+
                     <p className="textBody mt-2">Or scan the QR code to Add Profile</p>
                     <div className="qr mb-5"><QRCode value={qrCode} /></div>
                 </div>

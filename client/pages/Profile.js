@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import logo from '../assets/profile.png'
 export default class Navbar extends React.Component {
 
 
@@ -32,25 +32,33 @@ export default class Navbar extends React.Component {
     render() {
 
         return (
-            <React.Fragment>
 
-                <div className="container mt-5 " style={{ maxWidth: "100%", width: "400px" }}>
-                    <div className="card">
-                        <div className="card-header h3">Your Profile
+
+
+
+            <div className="container mt-5 " style={{ maxWidth: "100%", width: "400px" }}>
+
+                <div className="card">
+                    <img src={logo} alt="" height="200" />
+                    <div className="card-header h3">Your Profile
                     </div>
-                        <div className="card-body">
-                            <h5 className="card-title">Username : {this.state.username}</h5>
-                            <h5 className="card-title">Email : {this.state.email}</h5>
-
-                            <h5 className="card-title">Stream Key : {this.state.stream_key}</h5>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
-
-                        </div>
+                    <div className="card-body">
+                        <h5 className="card-title">Username : {this.state.username}</h5>
+                        <h5 className="card-title">Email : {this.state.email}</h5>
+                        <h5 className="card-title">Stream Key : {this.state.stream_key}</h5>
+                        <hr></hr>
+                        <form>
+                            <div className="form-group">
+                                <h5 className="card-title" for="fileUpload">Upload Profile Image</h5>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1"></input>
+                                <button className="btn btn-primary mt-2">Upload</button>
+                            </div>
+                        </form>
 
                     </div>
-                </div>
+                </div >
+            </div >
 
-            </React.Fragment >
         )
     }
 }

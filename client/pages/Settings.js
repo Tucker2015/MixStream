@@ -99,10 +99,7 @@ export default class Navbar extends React.Component {
 
                     <a href={qrCode} class="btn btn-secondary btn-lg" role="button" aria-disabled="true">Open Profile in Larix</a>
                     <p className="textBody mt-2">Or scan the QR code to Add Profile</p>
-                    <QRCode value={qrCode} />
-
-
-
+                    <div className="qr mb-5"><QRCode value={qrCode} /></div>
                 </div>
 
             </React.Fragment >

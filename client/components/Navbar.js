@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import profile from '../assets/profile.png'
 import axios from 'axios';
 import { faHome, faVideo, faTv, faUserAlt, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -44,9 +45,8 @@ export default class Navbar extends React.Component {
                         <img src={logo} alt="" width="40" height="40" class="d-inline-block align-center rounded mr-2" />
                            MixStream
                     </Link>
-                    <span className="navbar-text">
-                        {this.state.username}
-                    </span>
+
+
                     <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,6 +72,10 @@ export default class Navbar extends React.Component {
                                 <a className="nav-link" href="/Logout"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</a>
                             </li>
                         </ul>
+                        <span className="navbar-text">
+                            <img src={profile} alt="" width="60" height="40" className="profile mr-2" />
+                            {this.state.username}
+                        </span>
                     </div>
                 </div>
 

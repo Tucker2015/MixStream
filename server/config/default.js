@@ -16,7 +16,15 @@ const config = {
             mediaroot: './server/media',
             allow_origin: '*'
         },
+        https: {
+            port: 8443,
+            mediaroot: './server/media',
+            allow_origin: '*',
+            key: '/etc/letsencrypt/live/live.kevtucker.com/privkey.pem',
+            cert: '/etc/letsencrypt/live/live.kevtucker.com/fullchain.pem'
 
+
+        },
         trans: {
             ffmpeg: '/usr/bin/ffmpeg',
             tasks: [

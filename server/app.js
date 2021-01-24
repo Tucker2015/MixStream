@@ -15,30 +15,28 @@ const express = require('express'),
 
 // HTTPS Server Test
 
-const fs = require('fs');
-const http = require('http');
-const https = require('https');
-const privatekey = fs.readFileSync('/etc/letsencrypt/live/live.kevtucker.com/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/live.kevtucker.com/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/live.kevtucker.com/chain.pem', 'utf8');
-const credentials = {
-    key: privatekey,
-    cert: certificate,
-    ca: ca
-};
+// const fs = require('fs');
+// const http = require('http');
+// const https = require('https');
+// const privatekey = fs.readFileSync('/etc/letsencrypt/live/live.kevtucker.com/privkey.pem', 'utf8');
+// const certificate = fs.readFileSync('/etc/letsencrypt/live/live.kevtucker.com/cert.pem', 'utf8');
+// const ca = fs.readFileSync('/etc/letsencrypt/live/live.kevtucker.com/chain.pem', 'utf8');
+// const credentials = {
+//     key: privatekey,
+//     cert: certificate,
+//     ca: ca
+// };
 
 
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+// const httpServer = http.createServer(app);
+// const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(80, () => {
-    console.log('HTTP Server Running on Port 80');
-});
-httpsServer.listen(443, () => {
-    console.log('HTTP Server Running on Port 443');
-});
-
-
+// httpServer.listen(80, () => {
+//     console.log('HTTP Server Running on Port 80');
+// });
+// httpsServer.listen(443, () => {
+//     console.log('HTTP Server Running on Port 443');
+// });
 
 
 mongoose.connect('mongodb+srv://kevtucker:Baggersb20@mernauth.6wgpp.mongodb.net/nodeStream?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => console.log("MongoDB successfully connected"))

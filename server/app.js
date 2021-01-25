@@ -13,35 +13,12 @@ const express = require('express'),
     node_media_server = require('./media_server'),
     thumbnail_generator = require('./cron/thumbnails');
 
-// HTTPS Server Test
-
-// const fs = require('fs');
-// const http = require('http');
-// const https = require('https');
-// const privatekey = fs.readFileSync('/etc/letsencrypt/live/live.kevtucker.com/privkey.pem', 'utf8');
-// const certificate = fs.readFileSync('/etc/letsencrypt/live/live.kevtucker.com/cert.pem', 'utf8');
-// const ca = fs.readFileSync('/etc/letsencrypt/live/live.kevtucker.com/chain.pem', 'utf8');
-// const credentials = {
-//     key: privatekey,
-//     cert: certificate,
-//     ca: ca
-// };
-
-
-// const httpServer = http.createServer(app);
-// const httpsServer = https.createServer(credentials, app);
-
-// httpServer.listen(80, () => {
-//     console.log('HTTP Server Running on Port 80');
-// });
-// httpsServer.listen(443, () => {
-//     console.log('HTTP Server Running on Port 443');
-// });
-
 
 mongoose.connect('mongodb+srv://kevtucker:Baggersb20@mernauth.6wgpp.mongodb.net/nodeStream?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => console.log("MongoDB successfully connected"))
     .then(() => console.log("MongoDB successfully connected"))
     .catch(err => console.log(err));
+
+// Upload Files
 
 
 app.use(express.static(path.join(__dirname, 'public', 'index.html')));
@@ -50,7 +27,7 @@ app.set('views', path.join(__dirname, './views'));
 app.use(express.static('public'));
 app.use('/thumbnails', express.static('server/thumbnails'));
 app.use(flash());
-
+app.use('/profiles', express.static('server/media/profiles'));
 app.use(require('cookie-parser')());
 app.use(bodyParse.urlencoded({ extended: true }));
 app.use(bodyParse.json({ extended: true }));

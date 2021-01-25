@@ -67,7 +67,7 @@ export default class Navbar extends React.Component {
                     </div>
                 </div>
 
-                <div className="container mt-5 bg-dark p-3 w-100">
+                <div className="container mt-5 ">
                     <h4 className="textHeader">How to Stream</h4>
                     <hr className="my-3" />
                     <div className="col-12">
@@ -83,7 +83,7 @@ export default class Navbar extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="container mt-5 bg-dark p-3 w-100">
+                <div className="container mt-5">
                     <h4 className="textHeader">Using Larix with Mobile</h4>
                     <hr className="my-3" />
                     <p className="textBody">

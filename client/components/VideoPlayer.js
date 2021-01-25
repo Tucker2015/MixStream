@@ -5,6 +5,7 @@ import config from '../../server/config/default';
 import '../styles/VideoPlayer.scss';
 import '@videojs/themes/dist/city/index.css';
 import 'videojs-logo';
+import Chatbox from './chatbox';
 export default class VideoPlayer extends React.Component {
 
     constructor(props) {
@@ -68,6 +69,7 @@ export default class VideoPlayer extends React.Component {
                     ) : ' Loading ... '}
 
                 </div>
+                <Chatbox />
             </div>
 
 

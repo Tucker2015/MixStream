@@ -68,9 +68,9 @@ export default class VideoPlayer extends React.Component {
                     {this.props.match.params.username} Live
                 </div>
 
-                <div className="col-xs-12 col-sm-12 col-md-10 col-lg-8 mx-auto mt-5">
+                <div className="col-xs-12 col-sm-12 col-md-10 col-lg-8 mx-auto mt-5 player">
                     {this.state.stream ? (
-                        <div className="player">
+                        <div className="">
                             <div data-vjs-player >
                                 <video ref={node => this.videoNode = node} className="video-js vjs-big-play-centered" />
                             </div>

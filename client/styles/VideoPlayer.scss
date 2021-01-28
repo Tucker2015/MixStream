@@ -26,3 +26,24 @@
   margin-right: auto;
   }
 
+// .player{
+//   background-color: #484848;
+//   border-radius: 10px !important;
+//   padding: 15px;
+//   box-shadow: 3px 3px 10px #777;
+// }
+.video-js .vjs-big-play-button {
+  background-color: #007bff;
+  font-size: 3.5rem !important;
+  opacity: .8;
+  border-radius: 10%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #FFFFFF;
+
+}
+.video-js .vjs-big-play-button :hover {
+  background-color: #007bff;
+ 
+
+}

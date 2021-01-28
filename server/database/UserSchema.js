@@ -8,15 +8,7 @@ let UserSchema = new Schema({
     email: String,
     password: String,
     stream_key: String,
-    image_name: {
-        type: String,
-        default: "none",
-        required: true
-    },
-    imageDate: {
-        type: String,
-        required: true
-    }
+
 });
 
 UserSchema.methods.generateHash = (password) => {

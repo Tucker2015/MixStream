@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import logo from '../assets/profile.png'
+import ImageUpload from '../components/ImageUpload';
 export default class Navbar extends React.Component {
 
     constructor(props) {
@@ -44,10 +45,11 @@ export default class Navbar extends React.Component {
                             <div className="form-group">
                                 <h5 className="card-title" for="fileUpload">Upload Profile Image</h5>
                                 <input type="file" className="form-control-file" id="exampleFormControlFile1"></input>
-                                <button className="btn btn-primary mt-2 ">Upload</button>
+                                <button className="btn btn-primary mt-2 " onClick={() => { alert('Not Currently Available.'); }} >Upload</button>
                             </div>
                         </form>
                     </div>
+
                 </div >
             </div >
         )

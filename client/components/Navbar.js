@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import profile from '../assets/profile.png'
 import axios from 'axios';
-import { faHome, faVideo, faTv, faUserAlt, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faVideo, faTv, faUserAlt, faSignOutAlt, faMusic } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 require('../styles/NavBar.scss');
 export default class Navbar extends React.Component {
@@ -67,6 +67,9 @@ export default class Navbar extends React.Component {
 
                             <li className="nav-item float-right">
                                 <a className="nav-link" href="/profile"><FontAwesomeIcon icon={faUserAlt} /> Profile</a>
+                            </li>
+                            <li className="nav-item float-right">
+                                <a className="nav-link" href="https://mixshare.co.uk"><FontAwesomeIcon icon={faMusic} /> MixShare</a>
                             </li>
                             <li className="nav-item float-right">
                                 <a className="nav-link" href="/Logout"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</a>

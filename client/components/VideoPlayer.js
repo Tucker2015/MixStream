@@ -30,6 +30,7 @@ export default class VideoPlayer extends React.Component {
 
                 stream: true,
                 videoJsOptions: {
+                    retryOnError: true,
                     playsinline: true,
                     suppressNotSupportedError: true,
                     notSupportedMessage: 'Currently The stream is unavailable',

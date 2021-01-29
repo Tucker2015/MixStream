@@ -43,7 +43,7 @@ export default class Navbar extends React.Component {
 
                     <Link to={'/'} className={'navbar-brand'} >
                         <img src={logo} alt="" width="40" height="40" class="d-inline-block align-center rounded mr-2" />
-                           MixStream
+                           MixShare Live
                     </Link>
 
 

@@ -39,7 +39,7 @@ export default class VideoPlayer extends React.Component {
                     controls: true,
 
                     sources: [{
-                        src: 'https://live.kevtucker.com:' + config.rtmp_server.https.port + '/live/' + res.data.stream_key + '/index.m3u8',
+                        src: 'https://live.mixshare.co.uk:' + config.rtmp_server.https.port + '/live/' + res.data.stream_key + '/index.m3u8',
                         type: 'application/x-mpegURL'
                     }],
                     fluid: true,

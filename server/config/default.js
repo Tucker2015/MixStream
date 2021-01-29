@@ -20,8 +20,8 @@ const config = {
             port: 8443,
             mediaroot: './server/media',
             allow_origin: '*',
-            key: '/etc/letsencrypt/live/live.kevtucker.com/privkey.pem',
-            cert: '/etc/letsencrypt/live/live.kevtucker.com/fullchain.pem'
+            key: '/etc/letsencrypt/live/live.mixshare.co.uk/privkey.pem',
+            cert: '/etc/letsencrypt/live/live.mixshare.co.uk/fullchain.pem'
 
 
         },

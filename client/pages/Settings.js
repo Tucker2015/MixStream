@@ -87,23 +87,18 @@ export default class Navbar extends React.Component {
                     <h4 className="textHeader">Using Larix with Mobile</h4>
                     <hr className="my-3" />
                     <p className="textBody">
-                        To use Larix add a new connection with the + icon and enter the following for the url
-                        <b> rtmp://176.9.31.102:1935/live/</b>{this.state.stream_key}
+                        To use Larix simply download the App from the links below :
                     </p>
-                    <p className="textBody">Leave Login and Password blank.</p>
-                    <p className="textBody">Or click the button below to add profile automatically.</p>
-                    <a href={qrCode} class="btn btn-secondary btn-lg mb-2" role="button" aria-disabled="true">Open Profile in Larix</a>
-                    <br></br>
-
                     <div className="">
                         <p className="textBody" >Download Larix for Mobile</p>
                         <a href="https://play.google.com/store/apps/details?id=com.wmspanel.larix_broadcaster" class="btn btn-secondary btn-m mr-2" role="button" aria-disabled="true">Download Larix for Android</a>
 
-                        <a href="https://apps.apple.com/us/app/larix-broadcaster/id1042474385" class="btn btn-secondary btn-m" role="button" aria-disabled="true">Download Larix for iOS</a>
+                        <a href="https://apps.apple.com/us/app/larix-broadcaster/id1042474385" class="btn btn-secondary btn-m m-1" role="button" aria-disabled="true">Download Larix for iOS</a>
+                        <p className="textBody mt-3">Then hit the button below to open your profile in Larix automatically :</p>
+                        <a href={qrCode} class="btn btn-secondary btn-lg mt-2" role="button" aria-disabled="true">Open Profile in Larix</a>
                     </div>
 
-
-                    <p className="textBody mt-2">Or scan the QR code to Add Profile</p>
+                    <p className="textBody mt-3">Or scan the QR code to Add Profile</p>
                     <div className="qr mb-5"><QRCode value={qrCode} /></div>
                 </div>
 

@@ -4,10 +4,10 @@ import axios from 'axios';
 import config from '../../server/config/default';
 import '../styles/VideoPlayer.scss';
 import '@videojs/themes/dist/city/index.css';
-import 'videojs-logo';
 import Chatbox from './chatbox';
-
-
+import watermark from 'videojs-watermark';
+require('@silvermine/videojs-airplay')
+import '../../node_modules/videojs-watermark/dist/videojs-watermark.css';
 export default class VideoPlayer extends React.Component {
 
     constructor(props) {
@@ -19,6 +19,8 @@ export default class VideoPlayer extends React.Component {
     }
 
     componentDidMount() {
+        videojs.registerPlugin('watermark', watermark)
+
 
         axios.get('/user', {
             params: {
@@ -30,6 +32,18 @@ export default class VideoPlayer extends React.Component {
 
                 stream: true,
                 videoJsOptions: {
+
+                    plugins: {
+                        watermark: {
+                            image: 'https://ktinternet.net/radio-logos/logo.png',
+                            url: 'https://ktinternet.net/radio-logos/logo.png',
+                            position: 'top-left',
+                            hideOnReady: false,
+                            fadeTime: null,
+                        },
+
+                    },
+
                     retryOnError: true,
                     playsinline: true,
                     suppressNotSupportedError: true,

@@ -54,6 +54,26 @@ html,body{
   max-width: 400px;
   margin: auto;
 }
+.textContain {
+  height: 100%;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color:rgba(255, 255, 255, 0.555);
+  padding: 15px;
+  
+  max-width: 600px;
+  margin: auto;
+}
+.textContain p{
+  font-size: 1.2rem;
+}
+.textContain a{
+  text-align: center;
+  font-size: 1.4rem;
+}
+
 .logoContainer{
   display: flex;
   height: 100%;

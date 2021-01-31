@@ -28,7 +28,7 @@ export default class Navbar extends React.Component {
             })
     }
     render() {
-
+        let email_address = "mailto:info@mixshare.co.uk?subject=MixShare Live Support.  " + " Username : " + this.state.username
         return (
 
             <div className="slide container mt-5 " style={{ maxWidth: "100%", width: "400px" }}>
@@ -48,6 +48,7 @@ export default class Navbar extends React.Component {
                                 <button className="btn btn-primary mt-2 " onClick={() => { alert('Not Currently Available.'); }} >Upload</button>
                             </div>
                         </form>
+                        <a href={email_address} target="_blank" rel="noopener noreferrer"><h4>Email Support</h4></a>
                     </div>
 
                 </div >

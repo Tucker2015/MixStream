@@ -6,7 +6,6 @@ import '../styles/VideoPlayer.scss';
 import '@videojs/themes/dist/city/index.css';
 import Chatbox from './chatbox';
 import watermark from 'videojs-watermark';
-require('@silvermine/videojs-airplay')
 import '../../node_modules/videojs-watermark/dist/videojs-watermark.css';
 export default class VideoPlayer extends React.Component {
 
@@ -36,10 +35,9 @@ export default class VideoPlayer extends React.Component {
                     plugins: {
                         watermark: {
                             image: 'https://ktinternet.net/radio-logos/logo.png',
-                            url: 'https://ktinternet.net/radio-logos/logo.png',
                             position: 'top-left',
-                            hideOnReady: false,
-                            fadeTime: null,
+                            hideOnReady: true,
+                            fadeTime: 10000,
                         },
 
                     },

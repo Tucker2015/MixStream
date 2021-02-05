@@ -6,6 +6,8 @@ import axios from 'axios';
 import { faHome, faVideo, faTv, faUserAlt, faSignOutAlt, faMusic } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 require('../styles/NavBar.scss');
+
+
 export default class Navbar extends React.Component {
 
 
@@ -38,12 +40,12 @@ export default class Navbar extends React.Component {
     render() {
         return (
 
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+            <nav className="navbar navbar-expand-s navbar-dark bg-dark sticky-top">
                 <div className="container">
 
-                    <Link to={'/'} className={'navbar-brand'} >
+                    <Link to={'/'} className={'navbar-brand headerFont'} >
                         <img src={logo} alt="" width="40" height="40" class="d-inline-block align-center rounded mr-2" />
-                           MixShare Live
+                        MixShare Live
                     </Link>
 
 
@@ -54,31 +56,30 @@ export default class Navbar extends React.Component {
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ml-auto">
+                        <ul className="nav justify-content-center">
 
-                            <li className="nav-item float-right">
-
-                                <a className="nav-link" href="/"><FontAwesomeIcon icon={faTv} /> Live Streams</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-light" href="/"><FontAwesomeIcon icon={faTv} /> Live Streams</a>
                             </li>
-                            <li className="nav-item float-right">
-                                <a className="nav-link" href="/settings" ><FontAwesomeIcon icon={faVideo} /> Go Live
+                            <li className="nav-item">
+                                <a className="nav-link text-light" href="/settings" ><FontAwesomeIcon icon={faVideo} /> Go Live
                                 </a>
                             </li>
 
-                            <li className="nav-item float-right">
-                                <a className="nav-link" href="/profile"><FontAwesomeIcon icon={faUserAlt} /> Profile</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-light" href="/profile"><FontAwesomeIcon icon={faUserAlt} /> Profile</a>
                             </li>
-                            <li className="nav-item float-right">
-                                <a className="nav-link" href="https://mixshare.co.uk"><FontAwesomeIcon icon={faMusic} /> MixShare</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-light" href="https://mixshare.co.uk"><FontAwesomeIcon icon={faMusic} /> MixShare</a>
                             </li>
-                            <li className="nav-item float-right">
-                                <a className="nav-link" href="/Logout"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-light" href="/Logout"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</a>
                             </li>
                         </ul>
-                        <span className="navbar-text">
+                        {/* <div className="navbar-text mx-auto">
                             <img src={profile} alt="" width="60" height="40" className="profile mr-2" />
                             {this.state.username}
-                        </span>
+                        </div> */}
                     </div>
                 </div>
 

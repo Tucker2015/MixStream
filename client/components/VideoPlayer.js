@@ -3,10 +3,10 @@ import videojs, { VideoJsLogo } from 'video.js'
 import axios from 'axios';
 import config from '../../server/config/default';
 import '../styles/VideoPlayer.scss';
-import '@videojs/themes/dist/city/index.css';
 import Chatbox from './chatbox';
 import watermark from 'videojs-watermark';
 import '../../node_modules/videojs-watermark/dist/videojs-watermark.css';
+import { text } from '@fortawesome/fontawesome-svg-core';
 export default class VideoPlayer extends React.Component {
 
     constructor(props) {
@@ -38,10 +38,11 @@ export default class VideoPlayer extends React.Component {
                             position: 'top-left',
                             hideOnReady: true,
                             fadeTime: 10000,
+                            text: "test",
+                            type: text,
                         },
 
                     },
-
                     retryOnError: true,
                     playsinline: true,
                     suppressNotSupportedError: true,
@@ -49,7 +50,6 @@ export default class VideoPlayer extends React.Component {
                     preload: true,
                     autoplay: true,
                     controls: true,
-
                     sources: [{
                         src: 'https://live.mixshare.co.uk:' + config.rtmp_server.https.port + '/live/' + res.data.stream_key + '/index.m3u8',
                         type: 'application/x-mpegURL'

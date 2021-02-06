@@ -8,11 +8,35 @@ html,body{
   width: 100%;
   font-family: 'Poppins'!important;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #000000;
   background-image:url('images/background.jpg') ;
   background-repeat: no-repeat;
          background-attachment: fixed;
          background-size: cover;
+  
+}
+.mainBannerText {
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #fff;
+  font-size: 3em;
+  text-shadow: 0px 0px 50px rgba(50, 108, 194, 0.72);
+  justify-content: center;
+  text-align: center;
+}
+.mainLogoText {
+  font-family: "Poppins";
+  font-weight: 900;
+  color: #fff;
+  font-size: 5em;
+  text-shadow: 0px 0px 40px rgb(0, 102, 255);
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .mainLogoText {
+    font-size: 3em;
+  }
 }
 
 .navbar-brand{
@@ -43,7 +67,7 @@ html,body{
   font-weight: 4;
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
-.containerCenter {
+.loginBoxes {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -52,7 +76,7 @@ html,body{
   background-color:rgba(255, 255, 255, 0.555);
   padding: 15px;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
 }
 .textContain {
@@ -69,10 +93,21 @@ html,body{
 }
 .textContain p{
   font-size: 1.2rem;
+  text-shadow: 0px 0px 20px rgba(50, 108, 194, 0.72);
 }
+.textContain h1{
+  font-size: 2rem;
+  font-weight: 700;
+  color:rgb(255, 255, 255);
+ text-shadow: 0px 0px 20px rgba(4, 99, 242, 0.72);
+  z-index: 3;
+}
+
 .textContain a{
   text-align: center;
   font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.72);
 }
 
 .logoContainer{

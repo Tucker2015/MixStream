@@ -52,10 +52,10 @@ export default class Navbar extends React.Component {
             <React.Fragment>
                 <div className="container mt-5">
                     <div className="card" style={{ maxWidth: "100%", width: "400px" }}>
-                        <div className="card-header h3">Your Live Streaming Key :
+                        <div className="card-header h4">Your Live Streaming Key :
                     </div>
                         <div className="card-body">
-                            <h3 className="card-title">{this.state.stream_key}</h3>
+                            <h4 className="card-title">{this.state.stream_key}</h4>
                             <button
                                 className="btn btn-danger mt-3"
                                 onClick={this.generateStreamKey}>

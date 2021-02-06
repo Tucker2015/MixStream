@@ -6,7 +6,7 @@ import '../styles/VideoPlayer.scss';
 import Chatbox from './chatbox';
 import watermark from 'videojs-watermark';
 import '../../node_modules/videojs-watermark/dist/videojs-watermark.css';
-import { text } from '@fortawesome/fontawesome-svg-core';
+
 export default class VideoPlayer extends React.Component {
 
     constructor(props) {
@@ -38,8 +38,7 @@ export default class VideoPlayer extends React.Component {
                             position: 'top-left',
                             hideOnReady: true,
                             fadeTime: 10000,
-                            text: "test",
-                            type: text,
+
                         },
 
                     },

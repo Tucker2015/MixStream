@@ -76,7 +76,7 @@ export default class LiveStreams extends React.Component {
         return (
             <div className="container mt-5">
 
-                <h4 className="w-50 p-3 mb-2 bg-success text-white rounded">Live Streams</h4>
+                <h1 className="mainBannerText">Live Streams</h1>
                 <hr className="my-4" />
 
                 <div className="streams row">

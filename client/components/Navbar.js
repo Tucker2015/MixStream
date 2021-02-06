@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import profile from '../assets/profile.png'
 import axios from 'axios';
-import { faHome, faVideo, faTv, faUserAlt, faSignOutAlt, faMusic } from "@fortawesome/free-solid-svg-icons";
+import { faVideo, faTv, faUserAlt, faSignOutAlt, faMusic, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 require('../styles/NavBar.scss');
 
@@ -60,6 +60,9 @@ export default class Navbar extends React.Component {
 
                             <li className="nav-item">
                                 <a className="nav-link text-light" href="/"><FontAwesomeIcon icon={faTv} /> Live Streams</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link text-light" href="/upcoming"><FontAwesomeIcon icon={faCalendarAlt} /> Upcoming</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-light" href="/settings" ><FontAwesomeIcon icon={faVideo} /> Go Live

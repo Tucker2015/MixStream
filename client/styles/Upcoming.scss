@@ -1,0 +1,18 @@
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+    transition: 0.5s;
+  }
+  
+  .card-avatar {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+  }
+  .container {
+    transition: 0.5s;
+  }
+  .container:hover {
+    translate: (-20px);
+  }
+  

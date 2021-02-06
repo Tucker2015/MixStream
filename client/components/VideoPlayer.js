@@ -31,16 +31,13 @@ export default class VideoPlayer extends React.Component {
 
                 stream: true,
                 videoJsOptions: {
-
                     plugins: {
                         watermark: {
                             image: 'https://ktinternet.net/radio-logos/logo.png',
                             position: 'top-left',
                             hideOnReady: true,
                             fadeTime: 10000,
-
                         },
-
                     },
                     retryOnError: true,
                     playsinline: true,
@@ -74,22 +71,25 @@ export default class VideoPlayer extends React.Component {
     render() {
         return (
 
-            <div >
-                <div className="titleVid">
-                    {this.props.match.params.username} Live
-                </div>
-
-                <div className="col-xs-12 col-sm-12 col-md-10 col-lg-8 mx-auto mt-5 player">
-                    {this.state.stream ? (
-                        <div className="">
-                            <div data-vjs-player >
-                                <video ref={node => this.videoNode = node} className="video-js vjs-big-play-centered" />
+            <div className="">
+                <div className="containerVideo">
+                    <div className="box">
+                        {this.state.stream ? (
+                            <div className="">
+                                <div className="item" data-vjs-player >
+                                    <video ref={node => this.videoNode = node} style={{ outline: 'none' }} className="video-js vjs-big-play-centered" />
+                                </div>
                             </div>
-                        </div>
-                    ) : ' Loading ... '}
-
+                        ) : ' Loading ... '}
+                        <div className="titleVid">
+                            {this.props.match.params.username} Live
                 </div>
-                <Chatbox />
+                    </div>
+                    <div className="box">
+                        <Chatbox />
+                    </div>
+                </div>
+                {/* <Upcoming /> */}
             </div>
 
 

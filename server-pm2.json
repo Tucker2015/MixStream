@@ -12,7 +12,7 @@
   "pmx": true,
   "automation": true,
   "treekill": true,
-  "username": "kevin",
+  "username": "root",
   "windowsHide": true,
   "kill_retry_time": 100,
   "write": true

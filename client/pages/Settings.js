@@ -76,7 +76,7 @@ export default class Navbar extends React.Component {
                                 You can use <a target="_blank" href="https://obsproject.com/">OBS</a> or
                                 <a target="_blank" href="https://www.xsplit.com/">XSplit</a> to Live stream. If you're
                                 using OBS, go to Settings - Stream and select Custom from service dropdown.
-                                Enter <b>rtmp://176.9.31.102:1935/live</b> in server input field. Also, add your stream key.
+                                Enter <b>rtmp://live.mixshare.co.uk:1935/live</b> in server input field. Also, add your stream key.
                                 Click apply to save.
                             </p>
                             <img src={obsconfig} class="w-75 h-75 " alt="..."></img>

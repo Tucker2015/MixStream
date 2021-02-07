@@ -41,7 +41,7 @@ export default class Navbar extends React.Component {
         return (
 
             <nav className="navbar navbar-expand-s navbar-dark bg-dark sticky-top">
-                <div className="container">
+                <div className="container-fluid">
 
                     <Link to={'/'} className={'navbar-brand headerFont'} >
                         <img src={logo} alt="" width="40" height="40" class="d-inline-block align-center rounded mr-2" />

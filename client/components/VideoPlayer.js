@@ -6,7 +6,9 @@ import '../styles/VideoPlayer.scss';
 import Chatbox from './chatbox';
 import watermark from 'videojs-watermark';
 import '../../node_modules/videojs-watermark/dist/videojs-watermark.css';
-
+import Upcoming from '../pages/Upcoming';
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default class VideoPlayer extends React.Component {
 
     constructor(props) {
@@ -33,7 +35,7 @@ export default class VideoPlayer extends React.Component {
                 videoJsOptions: {
                     plugins: {
                         watermark: {
-                            image: 'https://ktinternet.net/radio-logos/logo.png',
+                            image: 'https://ktinternet.net/radio-logos/video_logo.png',
                             position: 'top-left',
                             hideOnReady: true,
                             fadeTime: 10000,
@@ -81,7 +83,7 @@ export default class VideoPlayer extends React.Component {
                                 </div>
                             </div>
                         ) : ' Loading ... '}
-                        <div className="titleVid">
+                        <div className="titleVid"><FontAwesomeIcon className="icon-flash" icon={faCircle} size={24} />
                             {this.props.match.params.username} Live
                 </div>
                     </div>
@@ -89,7 +91,7 @@ export default class VideoPlayer extends React.Component {
                         <Chatbox />
                     </div>
                 </div>
-                {/* <Upcoming /> */}
+                <Upcoming />
             </div>
 
 

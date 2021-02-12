@@ -9,22 +9,23 @@
 </div>
     <hr class="my-4">
     <div class="slideLogin loginBoxes rounded shadow mx-auto">
-        
+
         <form action="/login" method="post">
+        
             <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
-                <label for="inputEmail" class="visually-hidden h5">Email address</label>
+                <label for="inputEmail" class="visually-hidden h6">Email address</label>
                 <input type="email" name="email" class="form-signin" placeholder="Enter email" required >
                 <% if (errors.email.length) { %>
                     <small class="form-text text-danger"><%= errors.email %></small>
                 <% } %>
-                <label for="inputPassword" class="visually-hidden h5 mt-1">Password</label>
+                <label for="inputPassword" class="visually-hidden h6 mt-1">Password</label>
                 <input type="password" name="password" class="form-signin" placeholder="Password" required>
                 <% if (errors.password.length) { %>
                     <small class="form-text text-danger"><%= errors.password %></small>
                 <% } %>
            
             <div class="form-signin">
-                <div class="leader h5">
+                <div class="leader h6">
                     Don't have an account? Register <a href="/register">here </a>for free.
                 </div>
             </div>
